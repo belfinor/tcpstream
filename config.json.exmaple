@@ -1,0 +1,14 @@
+{
+    "listen": ":7000",
+    "log": {
+        "template": "tcpstream-%Y%m%d.log",
+        "period":   86400,
+        "save":     7,
+        "level":    "info"
+    },
+    "proxy": [
+        "127.0.0.1:7001",
+        "127.0.0.1:7002"
+    ]
+}
+
