@@ -10,12 +10,14 @@ import (
   "encoding/json"
   "fmt"
   "github.com/belfinor/Helium/log"
+  "github.com/belfinor/Helium/daemon"
   "io/ioutil"
   "os"
 )
 
 
 type Config struct {
+  Daemon daemon.Config `json:"daemon"`
   Listen string `json:"listen"`
   Log    log.Config `json:"log"`
   Proxy  []string `json:"proxy"`
