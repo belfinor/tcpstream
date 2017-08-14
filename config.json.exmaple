@@ -1,4 +1,8 @@
 {
+    "daemon": {
+        "pid": "tcpstream.pid",
+        "dir": "."
+    },
     "listen": ":7000",
     "log": {
         "template": "tcpstream-%Y%m%d.log",
