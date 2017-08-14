@@ -36,15 +36,13 @@ install -d %{buildroot}%{_bindir}
 install -d %{buildroot}%{_sysconfdir}
 install -d  %{buildroot}%{_sysconfdir}/init.d
 install -d  %{buildroot}/var/log/tcpstream
-
 install -p -m 0755 ./tcpstream %{buildroot}%{_bindir}/tcpstream
 install -p -m 0755 ./config.json.example %{buildroot}%{_sysconfdir}/tcpstream.json.example
 install -p -m 0755 ./init.d %{buildroot}%{_sysconfdir}/init.d/tcpstream.example
 
 %files
 %defattr(-,root,root,-)
-%attr(0755,root,root) %{_bindir}/lnode
-%attr(0755,root,root) %{_bindir}/lproxy
+%attr(0755,root,root) %{_bindir}/tcpstream
 %attr(0755,root,root) %{_sysconfdir}/tcpstream.json.example
 %attr(0755,root,root) %{_sysconfdir}/init.d/tcpstream.example
 
