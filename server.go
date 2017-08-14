@@ -2,8 +2,8 @@ package main
 
 
 // @author  Mikhail Kirillov <mikkirillov@yandex.ru>
-// @version 1.000
-// @date    2017-08-13
+// @version 1.001
+// @date    2017-08-14
 
 
 import (
@@ -65,7 +65,7 @@ func (s *Server) connet_handler(conn net.Conn, id int64 ) {
           break;
         }
 
-        //list := buffer[:n]
+        STREAM.Send( buffer[:n] )
         
     }
 
