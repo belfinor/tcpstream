@@ -13,6 +13,9 @@ import (
 )
 
 
+var STREAM *Stream
+
+
 func main() {
 
     conf   := ""
@@ -36,6 +39,8 @@ func main() {
     } else {
         log.Info( "start application" )
     }
+
+    STREAM = NewStream( cfg.Proxy )
 
     srv := &Server{
         Addr:     cfg.Listen,

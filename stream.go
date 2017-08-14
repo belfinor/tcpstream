@@ -11,14 +11,16 @@ type Stream struct {
 }
 
 
-func MakeStream( addrs []string ) {
-  str := &Stream{ 
+func NewStream( addrs []string ) *Stream {
+  s := &Stream{ 
     Connects: make( []*Conn, len(addrs) ),
   }
 
   for i, addr := range addrs {
-    str.Connects[i] = NewConn( addr )
+    s.Connects[i] = NewConn( addr )
   }
+
+  return s
 }
 
 
