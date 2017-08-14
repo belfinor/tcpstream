@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+CDIR=$(pwd)
+cd ~/rpm/SOURCES
+rm -rf lcluster*
+git clone "git@github.com:belfinor/tcpstream.git"
+tar czfv tcpstream.tar.gz tcpstream
+rpmbuild -bb --sign tcpstream/tcpstream.spec
+
